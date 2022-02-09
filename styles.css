@@ -1,0 +1,447 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat Alternates', sans-serif;
+    background: white;
+    color: black;
+    min-height: 100vh;
+    scroll-behavior: smooth;
+}
+
+/*NAVIGATION BAR*/
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 1s;
+    padding: 40px 100px;
+    z-index: 3;
+    box-shadow: 3px 3px 10px grey;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+header.sticky {
+    padding: 10px 100px;
+    background: #000;
+    opacity: 0.9;
+}
+
+header .logo {
+    position: relative;
+    font-weight: 700;
+    color: #000;
+    text-decoration: none;
+    font-size: 2em;
+    letter-spacing: 2px;
+    transition: 1s;
+    text-transform: lowercase;
+}
+
+header ul {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+header ul li {
+    position: relative;
+    list-style: none;
+}
+
+header ul li a {
+    position: relative;
+    margin: 0 15px;
+    text-decoration: none;
+    color: #000;
+    letter-spacing: 2px;
+    font-weight: 500;
+    transition: 1s;
+    z-index: 3;
+}
+header ul li a:hover {
+    color: teal;
+}
+
+header.sticky .logo, header.sticky ul li a {
+    color: #fff;
+}
+header.sticky ul li a:hover {
+    color: teal;
+}
+header.sticky .logo:hover {
+    color: teal;
+}
+
+/*CONTAINER*/
+.section-container {
+    width: 100%;
+    height: 100%;
+}
+/*ROZDELENI SEKCI*/
+section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/*TEXT UNDER MENUBAR*/
+.motto {
+    padding: 400px 100px;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+/*Parallax ef.*/
+.parallax {
+    height: 500px;
+    background: transparent;
+    z-index: 1;
+    text-align: center;
+}
+.parallax-text {
+    position: relative;
+    letter-spacing: 2px;
+    word-spacing: 100px;
+    color: #fff;
+    padding: 250px;
+}
+
+/*Hlavní 3D animace*/
+.main-anim {
+    display: flex;
+    position: absolute;
+    height: 450px;
+    margin-left: 860px;
+    margin-top: 330px;
+}
+#pismena{
+    animation-name: textFly;
+    animation-direction: alternate;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+@keyframes textFly {
+    0%{
+        transform: translateX(0) translateY(0);
+        
+    }
+    10%{
+        transform: translateX(0) translateY(0);
+        
+    }  
+    100%{
+        transform: translateX(-110px) translateY(25px);
+        
+    }
+}
+#pismena-kostra {
+    opacity: 0;
+    animation-name: textFlyKostra;
+    animation-direction: alternate;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+@keyframes textFlyKostra {
+    0%{
+        transform: translateX(0) translateY(0);
+        opacity: 0;
+    }
+    10%{
+        transform: translateX(0) translateY(0);
+        opacity: 0;
+    }  
+    100%{
+        transform: translateX(-110px) translateY(25px);
+        opacity: 1;
+    }
+}
+
+/*STRÁNKA ABOUT A PARALLAX UVNITŘ NÍ*/
+
+.section-container1 {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100vh;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+/* nápis o nás a animace*/
+.motto-about {
+    display: flex;
+    position: relative;
+    margin: 400px;
+}
+
+.motto-about path:nth-child(1){
+    stroke-dasharray: 85px;
+    stroke-dashoffset: 85px;
+    animation: aboutStrokeOne 8s ease infinite;
+}
+.motto-about path:nth-child(2){
+    stroke-dasharray: 105px;
+    stroke-dashoffset: 105px;
+    animation: aboutStrokeTwo 8s ease infinite;
+}
+.motto-about path:nth-child(3){
+    stroke-dasharray: 80px;
+    stroke-dashoffset: 80px;
+    animation: aboutStrokeThree 8s ease infinite;
+}
+.motto-about path:nth-child(4){
+    stroke-dasharray: 100px;
+    stroke-dashoffset: 100px;
+    animation: aboutStrokeFour 8s ease infinite;
+}
+
+@keyframes aboutStrokeOne{
+    0%{stroke-dashoffset: 85;}
+    50%{stroke-dashoffset: 0;}
+    100%{stroke-dashoffset: 85;}
+}
+@keyframes aboutStrokeTwo{
+    0%{stroke-dashoffset: 105;}
+    50%{stroke-dashoffset: 0;}
+    100%{stroke-dashoffset: 105;}
+}
+@keyframes aboutStrokeThree{
+    0%{stroke-dashoffset: 80;}
+    50%{stroke-dashoffset: 0;}
+    100%{stroke-dashoffset: 80;}
+}
+@keyframes aboutStrokeFour{
+    0%{stroke-dashoffset: 100;}
+    50%{stroke-dashoffset: 0;}
+    100%{stroke-dashoffset: 100;}
+}
+/*informace*/
+.info{
+    display: flex;
+    position: absolute;
+    margin-left: 430px;
+    margin-top: 0px;
+    animation: infoFly 5s infinite;
+}
+
+.info-shadow{
+    display: flex;
+    position: absolute;
+    margin-left: 440px;
+    margin-top: 205px;
+}
+
+@keyframes infoFly{
+    0%{margin-top: 160px;}
+    10%{margin-top: 145px;}
+    20%{margin-top: 160px;}
+    30%{margin-top: 150px;}
+    40%{margin-top: 160px;}
+    50%{margin-top: 145px;}
+    60%{margin-top: 160px;}
+    70%{margin-top: 150px;}
+    80%{margin-top: 160px;}
+    90%{margin-top: 145px;}
+    100%{margin-top: 160px;}
+}
+/*pravá stránka about-info*/
+.first{
+    display: flex;
+    height: 100vh;
+    width: 50%;
+    margin-left: 240px;
+    margin-top: 250px;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+/*stránka služby -> slider*/
+
+.motto-services{
+    margin-top: 110px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.motto-services path:nth-child(1){
+    stroke-dasharray: 128px;
+    stroke-dashoffset: 128px;
+    animation:serviceStrokeOne  8s ease infinite;
+}
+.motto-services path:nth-child(2){
+    stroke-dasharray: 68px;
+    stroke-dashoffset: 68px;
+    animation:serviceStrokeTwo  8s ease infinite;
+}
+.motto-services path:nth-child(3){
+    stroke-dasharray: 107px;
+    stroke-dashoffset: 107px;
+    animation:serviceStrokeThree  8s ease infinite;
+}
+.motto-services path:nth-child(4){
+    stroke-dasharray: 118px;
+    stroke-dashoffset: 118px;
+    animation:serviceStrokeFour  8s ease infinite;
+}
+.motto-services path:nth-child(5){
+    stroke-dasharray: 95px;
+    stroke-dashoffset: 95px;
+    animation:serviceStrokeFive  8s ease infinite;
+}
+.motto-services path:nth-child(6){
+    stroke-dasharray: 138px;
+    stroke-dashoffset: 138px;
+    animation:serviceStrokeSix  8s ease infinite;
+}
+@keyframes serviceStrokeOne{
+    0%{stroke-dashoffset: 128;}
+    50%{stroke-dashoffset: 0;}
+    100%{stroke-dashoffset: 128;}
+}
+@keyframes serviceStrokeTwo{
+    0%{stroke-dashoffset: 68;}
+    50%{stroke-dashoffset: 0;}
+    100%{stroke-dashoffset: 68;}
+}
+@keyframes serviceStrokeThree{
+    0%{stroke-dashoffset: 107;}
+    50%{stroke-dashoffset: 0;}
+    100%{stroke-dashoffset: 107;}
+}
+@keyframes serviceStrokeFour{
+    0%{stroke-dashoffset: 118;}
+    50%{stroke-dashoffset: 0;}
+    100%{stroke-dashoffset: 118;}
+}
+@keyframes serviceStrokeFive{
+    0%{stroke-dashoffset: 95;}
+    50%{stroke-dashoffset: 0;}
+    100%{stroke-dashoffset: 95;}
+}
+@keyframes serviceStrokeSix{
+    0%{stroke-dashoffset: 138;}
+    50%{stroke-dashoffset: 0;}
+    100%{stroke-dashoffset: 138;}
+}
+
+.swiper {
+    width: 90%;
+    height: 600px;
+    margin-top: 50px;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.swiper-slide {
+    text-align: center;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-cont{
+    border: 2px solid black;
+    border-radius: 25px;
+    height: 500px;
+    width: 300px;
+    padding: 5px;
+}
+
+.service-name{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-family: 'Montserrat Alternates', sans-serif;
+    line-height: 100%;
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+.service-details{
+    font-weight: normal;
+    letter-spacing: 1px;
+    padding: 5px;
+    font-family: 'Montserrat Alternates', sans-serif;
+    line-height: 120%;
+}
+
+.service-image-microsite{
+    margin-top: 95px;
+}
+.service-image-company{
+    margin-top: 15px;
+}
+.service-image-personal{
+    margin-top: 198px;
+}
+.service-image-blog{
+    margin-top: 180px;
+}
+.service-image-nft{
+    margin-top: 105px;
+}
+.service-image-design{
+    margin-top: 105px;
+}
+.service-image-addweb{
+    margin-top: 10px;
+}
+.service-image-social{
+    margin-top: 65px;
+}
+.service-image-addposter{
+    margin-top: 165px;
+}
+
+/*Sekce kontaktujte nás*/
+
+.form-label{
+    font-size: 20px;
+}
+
+.contact-wrapper{
+    margin-top: 200px;
+    margin-left: 100px;
+    max-width: 800px;
+    border: 2px solid black;
+    border-radius: 25px;
+    padding: 30px;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.write-us{
+    margin-bottom: 50px;
+}
+
+@media only screen and (max-width: 600px) {
+    .contact-wrapper{
+        margin-left: auto;
+        margin-right: auto;
+    }
+  }

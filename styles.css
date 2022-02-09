@@ -169,7 +169,7 @@ section {
 
 /*STRÁNKA ABOUT A PARALLAX UVNITŘ NÍ*/
 
-.section-container1 {
+.section-container-about {
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -180,8 +180,18 @@ section {
 .motto-about {
     display: flex;
     position: relative;
-    margin: 400px;
+    margin-top: 110px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 40px;
 }
+
+@media only screen and (max-width: 600px) {
+    .motto-about{
+        margin: 20px;
+    }
+  }
+
 
 .motto-about path:nth-child(1){
     stroke-dasharray: 85px;
@@ -225,44 +235,21 @@ section {
     100%{stroke-dashoffset: 100;}
 }
 /*informace*/
-.info{
-    display: flex;
-    position: absolute;
-    margin-left: 430px;
-    margin-top: 0px;
-    animation: infoFly 5s infinite;
-}
 
-.info-shadow{
+.about-content{
     display: flex;
-    position: absolute;
-    margin-left: 440px;
-    margin-top: 205px;
-}
-
-@keyframes infoFly{
-    0%{margin-top: 160px;}
-    10%{margin-top: 145px;}
-    20%{margin-top: 160px;}
-    30%{margin-top: 150px;}
-    40%{margin-top: 160px;}
-    50%{margin-top: 145px;}
-    60%{margin-top: 160px;}
-    70%{margin-top: 150px;}
-    80%{margin-top: 160px;}
-    90%{margin-top: 145px;}
-    100%{margin-top: 160px;}
-}
-/*pravá stránka about-info*/
-.first{
-    display: flex;
-    height: 100vh;
-    width: 50%;
-    margin-left: 240px;
-    margin-top: 250px;
     font-size: 16px;
     letter-spacing: 1px;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
 }
+
+@media only screen and (max-width: 600px) {
+    .about-content{
+        width: 400px;
+    }
+  }
 
 /*stránka služby -> slider*/
 
@@ -443,5 +430,6 @@ section {
     .contact-wrapper{
         margin-left: auto;
         margin-right: auto;
+        width: 350px;
     }
   }

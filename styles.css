@@ -13,31 +13,30 @@ body {
 }
 
 /*NAVIGATION BAR*/
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
+nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    transition: 1s;
+    min-height: 8vh;
+    font-family: 'Montserrat Alternates', sans-serif;
     padding: 40px 100px;
     z-index: 3;
     box-shadow: 3px 3px 10px grey;
-    font-family: 'Montserrat Alternates', sans-serif;
+    position: fixed;
+    transition: 1s;
+    width: 100%;
+    background-color: #000;
 }
 
-header.sticky {
+nav.sticky {
     padding: 10px 100px;
     background: #000;
     opacity: 0.9;
 }
 
-header .logo {
-    position: relative;
+nav .logo {
     font-weight: 700;
-    color: #000;
+    color: #fff;
     text-decoration: none;
     font-size: 2em;
     letter-spacing: 2px;
@@ -45,40 +44,92 @@ header .logo {
     text-transform: lowercase;
 }
 
-header ul {
-    position: relative;
+.nav-links{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
+    justify-content: space-around;
+    width: 30%;
 }
 
-header ul li {
-    position: relative;
+.nav-links a{
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-size: 14px;
+}
+
+.nav-links li{
     list-style: none;
 }
 
-header ul li a {
-    position: relative;
-    margin: 0 15px;
-    text-decoration: none;
-    color: #000;
-    letter-spacing: 2px;
-    font-weight: 500;
-    transition: 1s;
-    z-index: 3;
+.burger{
+    display: none;
 }
-header ul li a:hover {
+
+.burger div{
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px;
+}
+
+
+@media (max-width: 768px){
+    body{
+        overflow-x: hidden;
+    }
+    .nav-links{
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color: #000;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+    .nav-links li{
+        opacity: 0;
+    }
+    .burger{
+        display: block;
+        cursor: pointer;
+    }
+    .nav-links a{
+        color: #fff;
+    }
+    nav .logo{
+        font-size: 20px;
+        margin-right: 100px;
+    }
+}
+
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.nav-active{
+    transform: translateX(0%);
+}
+
+nav ul li a:hover {
     color: teal;
 }
 
-header.sticky .logo, header.sticky ul li a {
+nav.sticky .logo, nav.sticky ul li a {
     color: #fff;
 }
-header.sticky ul li a:hover {
+nav.sticky ul li a:hover {
     color: teal;
 }
-header.sticky .logo:hover {
+nav.sticky .logo:hover {
     color: teal;
 }
 
@@ -109,13 +160,12 @@ section {
     z-index: 1;
     text-align: center;
 }
-.parallax-text {
-    position: relative;
-    letter-spacing: 2px;
-    word-spacing: 100px;
-    color: #fff;
-    padding: 250px;
-}
+
+@media only screen and (max-width: 768px) {
+    .parallax{
+        height: 200px;
+    }
+  }
 
 /*Hlavní 3D animace*/
 .main-anim {
@@ -125,6 +175,14 @@ section {
     margin-left: 860px;
     margin-top: 330px;
 }
+
+@media only screen and (max-width: 768px) {
+    .main-anim{
+        display: none;
+    }
+  }
+
+
 #pismena{
     animation-name: textFly;
     animation-direction: alternate;
@@ -186,7 +244,7 @@ section {
     margin-bottom: 40px;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
     .motto-about{
         margin: 20px;
     }
@@ -245,9 +303,10 @@ section {
     margin-right: auto;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
     .about-content{
-        width: 400px;
+        width: 380px;
+        height: 50vh;
     }
   }
 
@@ -426,10 +485,11 @@ section {
     margin-bottom: 50px;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
     .contact-wrapper{
         margin-left: auto;
         margin-right: auto;
         width: 350px;
+        margin-bottom: 50px;
     }
   }

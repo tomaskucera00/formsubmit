@@ -624,7 +624,13 @@ section {
         margin-right: auto;
         margin-top: 50px;
         margin-bottom: 50px;
-        max-width: 340px;
+        width: 100%;
+        border: none;
+        border-radius: 0px;
+        background-color: rgb(99, 99, 99);
+    }
+    .contact-icon{
+        stroke: #fff;
     }
     .google-map{
         display: flex;

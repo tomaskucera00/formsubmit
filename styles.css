@@ -371,7 +371,7 @@ section {
 
 @media only screen and (max-width: 768px) {
     .about-content{
-        width: 380px;
+        width: 340px;
         height: 50vh;
         margin-top: 20px;
         text-align: center;
@@ -572,6 +572,7 @@ section {
         margin-right: auto;
         width: 330px;
         margin-bottom: 50px;
+        margin-top: 50px;
     }
 }
 

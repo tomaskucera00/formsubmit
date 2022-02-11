@@ -1,0 +1,69 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat Alternates', sans-serif;
+    background: white;
+    color: black;
+    min-height: 100vh;
+    scroll-behavior: smooth;
+}
+
+.blackground{
+    width: 100%;
+    height: 8vh;
+    background-color: #000;
+}
+
+.motto{
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 0px;
+    color: #fff;
+    padding: 10px;
+}
+
+.about-text{
+    text-align: left;
+    width: 300px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    border-left: 2px solid black;
+    padding-left: 20px;
+}
+
+.icons-table{
+    height: 192px;
+    width: 250px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 25px;
+    border: 2px solid black;
+    padding: 10px;
+}
+
+.noDecoration, a:link, a:visited {
+    text-decoration: none;
+}
+
+.back-wrapper{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    width: 240px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+}
+
+.back-text{
+    font-family: 'Montserrat Alternates', sans-serif;
+    margin-top: 3px;
+    color: #000;
+}

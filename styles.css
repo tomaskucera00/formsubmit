@@ -15,24 +15,19 @@ body {
 /*NAVIGATION BAR*/
 nav {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     min-height: 8vh;
     font-family: 'Montserrat Alternates', sans-serif;
-    padding: 40px 100px;
     z-index: 3;
-    box-shadow: 3px 3px 10px grey;
+    padding: 20px 100px;
     position: fixed;
     transition: 1s;
     width: 100%;
     background-color: #000;
-}
-
-nav.sticky {
-    padding: 10px 100px;
-    background: #000;
     opacity: 0.9;
 }
+
 
 nav .logo {
     font-weight: 700;
@@ -101,14 +96,15 @@ nav .logo {
     .burger{
         display: block;
         cursor: pointer;
-        z-index: 5;
     }
     .nav-links a{
         color: #fff;
     }
     nav .logo{
         font-size: 20px;
-        margin-right: 100px;
+    }
+    nav{
+        padding: 20px 30px;
     }
 }
 
@@ -129,7 +125,7 @@ nav ul li a:hover {
     color: teal;
 }
 
-nav.sticky .logo, nav.sticky ul li a {
+nav.sticky .logo, ul li a {
     color: #fff;
 }
 nav.sticky ul li a:hover {
@@ -154,10 +150,31 @@ section {
 
 /*TEXT UNDER MENUBAR*/
 .motto {
-    padding: 400px 100px;
+    margin-top: 400px;
+    font-weight: bolder;
+    margin-left: 100px;
     font-size: 2.5rem;
     letter-spacing: 2px;
     font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.side-motto{
+    margin-left: 100px;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+@media (max-width: 768px) {
+    .motto{
+        font-size: 2rem;
+        margin-top: 220px;
+        margin-left: 30px;
+    }
+    .side-motto{
+        font-size: 1rem;
+        margin-left: 30px;
+    }
 }
 /*Parallax ef.*/
 .parallax {
@@ -171,7 +188,7 @@ section {
     .parallax{
         height: 200px;
     }
-  }
+}
 
 /*Hlavní 3D animace*/
 .main-anim {
@@ -182,11 +199,14 @@ section {
     margin-top: 330px;
 }
 
-@media only screen and (max-width: 768px) {
+@media (max-width: 768px) {
     .main-anim{
-        display: none;
+        margin-left: 0px;
+        height: 400px;
+        width: 350px;
+        margin-top: 400px;
     }
-  }
+}
 
 
 #pismena{
@@ -252,9 +272,9 @@ section {
 
 @media only screen and (max-width: 768px) {
     .motto-about{
-        margin: 20px;
+        margin-top: 130px;
     }
-  }
+}
 
 
 .motto-about path:nth-child(1){
@@ -301,26 +321,73 @@ section {
 /*informace*/
 
 .about-content{
-    display: flex;
+    display: block;
     font-size: 16px;
     letter-spacing: 1px;
     width: 500px;
     margin-left: auto;
     margin-right: auto;
+    text-align: left;
+}
+
+.about-more{
+    width: 150px;
+    border-radius: 25px;
+    height: 40px;
+    background-color: #000;
+    color: #fff;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    display: none;
+    text-decoration: none;
+}
+
+.icons-table{
+    width: 350px;
+    height: 282px;
+    display: flex;
+    position: absolute;
+    margin-left: 170px;
+    margin-top: 350px;
+    border-radius: 25px;
+    border: 2px solid black;
+    padding: 20px;
+}
+@media (max-width: 768px){
+    .icons-table{
+        display: none;
+    }
+}
+
+@media (max-width: 768px){
+    .about-responsive{
+        display: none;
+    }
+    .about-more{
+        display: block;
+    }
 }
 
 @media only screen and (max-width: 768px) {
     .about-content{
         width: 380px;
         height: 50vh;
+        margin-top: 20px;
+        text-align: center;
     }
-  }
+}
+
+.noDecoration, a:link, a:visited {
+    text-decoration: none;
+}
+
 
 /*stránka služby -> slider*/
 
 .motto-services{
-    margin-top: 110px;
-    margin-bottom: 10px;
+    margin-top: 130px;
+    margin-bottom: 0px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -388,7 +455,7 @@ section {
 .swiper {
     width: 90%;
     height: 600px;
-    margin-top: 50px;
+    margin-top: 20px;
     font-family: 'Montserrat Alternates', sans-serif;
 }
 
@@ -486,6 +553,7 @@ section {
     border-radius: 25px;
     padding: 30px;
     font-family: 'Montserrat Alternates', sans-serif;
+    display: flex;
 }
 
 .write-us{
@@ -496,7 +564,66 @@ section {
     .contact-wrapper{
         margin-left: auto;
         margin-right: auto;
-        width: 350px;
+        width: 380px;
         margin-bottom: 50px;
     }
-  }
+}
+
+.contact-info-wrapper{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat Alternates', sans-serif;
+    margin-top: -620px;
+    margin-left: 1050px;
+    width: 400px;
+    border: 2px solid black;
+    border-radius: 25px;
+}
+
+.form-control{
+    max-height: 220px;
+}
+
+.contact-info-wrapper h3{
+    font-size: 20px;
+}
+
+.mobile-wrapper{
+    display: flex;
+    margin: 30px;
+
+}
+.email-wrapper{
+    display: flex;
+    margin: 30px;
+}
+.adress-wrapper{
+    display: flex;
+    margin: 30px;
+}
+
+.contact-icon{
+    margin-right: 20px;
+    margin-top: 0px;
+}
+
+.google-map{
+    margin-left: 1050px;
+    margin-top: 30px;
+}
+
+@media (max-width: 768px){
+    .contact-info-wrapper{
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    .google-map{
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        width: 390px;
+        margin-bottom: 30px;
+    }
+}

@@ -1,9 +1,3 @@
-/*Menu bar sticky*/
-window.addEventListener("scroll",function(){
-  var header = this.document.querySelector("nav");
-  header.classList.toggle("sticky", window.scrollY > 0);
-})
-
 /*Posouvání mezi sekcemi*/
 $('nav a').on('click',function(e){
   if(this.hash !== '') {

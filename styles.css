@@ -71,6 +71,11 @@ nav .logo {
     background-color: #fff;
     margin: 5px;
 }
+@media (max-width: 1400px){
+    .nav-links{
+        width: 60%;
+    }
+}
 
 
 @media (max-width: 768px){
@@ -96,6 +101,7 @@ nav .logo {
     .burger{
         display: block;
         cursor: pointer;
+        z-index: 5;
     }
     .nav-links a{
         color: #fff;
@@ -464,6 +470,7 @@ section {
 .service-image-addposter{
     margin-top: 165px;
 }
+
 
 /*Sekce kontaktujte nás*/
 
